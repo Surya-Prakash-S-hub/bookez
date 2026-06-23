@@ -14,7 +14,7 @@ app.use(express.json());
 
 
 app.get("/", (req, res) => {
-  res.send("API Running...");
+  res.json({message:'API running successfully'});
 });
 
 app.get('/allgenre/books', async(req, res) => {
