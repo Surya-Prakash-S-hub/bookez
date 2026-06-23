@@ -3,8 +3,9 @@ import { Heart } from "lucide-react";
 import { Star as StarFilled } from "lucide-react";
 
 export const BookCard = ({ book }) => {
-  const [randomNum] = useState(() => Math.floor(Math.random() * 10) + 1);
+
   const [liked, setLiked] = useState(false);
+
   return (
     <article className="group flex flex-col space-y-4">
       <div
@@ -12,7 +13,7 @@ export const BookCard = ({ book }) => {
         className="relative overflow-hidden w-full max-w-70 h-65"
       >
         <img
-          src={`http://localhost:5173/src/assets/images/book${randomNum}.jpg`}
+          src={book.image}
           alt={book.title}
           className="h-65 w-full object-contain"
         />

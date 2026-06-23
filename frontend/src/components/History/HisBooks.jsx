@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { BookCard } from "../Accessories/BookCards";
 import { API_BASE_URL } from "../../config/api";
+import { getBookImage } from "../../utils/bookImages";
 
 export const HistoryBooks = () => {
   const [bookDetails, setBookDetails] = useState([]);
@@ -16,7 +17,12 @@ export const HistoryBooks = () => {
           return response.json();
         })
         .then((data) => {
-          setBookDetails(data.output);
+          const mapWithImages = (arr = []) =>
+            arr.map((book) => ({
+              ...book,
+              image: getBookImage(book.id),
+            }));
+          setBookDetails(mapWithImages(data.output));
           setLoading(false);
         })
         .catch((err) => {

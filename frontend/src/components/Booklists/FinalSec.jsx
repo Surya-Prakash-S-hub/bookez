@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { BookButton } from "./Button";
 import { Books } from "./Booktypes";
 import { API_BASE_URL } from "../../config/api";
+import { getBookImage } from "../../utils/bookImages";
 
 export const FinalOut = () => {
   const [allBooks, setAllBooks] = useState([]);
@@ -26,10 +27,16 @@ export const FinalOut = () => {
         const philData = await philRes.json();
         const artData = await artRes.json();
 
-        setAllBooks(allData.output || []);
-        setFictionBooks(ficData.output || []);
-        setPhilosophyBooks(philData.output || []);
-        setArtBooks(artData.output || []);
+        const mapWithImages = (arr = []) =>
+          arr.map((book) => ({
+            ...book,
+            image: getBookImage(book.id),
+          }));
+
+        setAllBooks(mapWithImages(allData.output));
+        setFictionBooks(mapWithImages(ficData.output));
+        setPhilosophyBooks(mapWithImages(philData.output));
+        setArtBooks(mapWithImages(artData.output));
         setLoading(false);
       } catch (err) {
         console.error(err);
