@@ -77,7 +77,7 @@ export const Slider = () => {
 
   const book = books[active];
   return (
-    <section className="mx-auto max-w-7xl px-6 py-6">
+    <section className="mx-auto max-w-7xl m-4 rounded-xl px-6 py-6 bg-gray-100">
       <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         {/* Left Content */}
         <div className="min-h-87.5 flex items-center">

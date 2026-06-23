@@ -52,7 +52,7 @@ export const HeroSlider = () => {
 
             <div className="relative z-10 flex items-center h-full px-50 text-white">
               <div>
-                <span className="text-xs bg-white/10 px-3 py-1 rounded-full">
+                <span className="text-xs border-white border-l-2 border-r-2 bg-white/10 px-3 py-1 rounded-full">
                   {s.tag}
                 </span>
 

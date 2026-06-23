@@ -1,22 +1,23 @@
 import { useState } from "react";
-import { Heart } from "lucide-react";
-import { Star as StarFilled } from "lucide-react";
+import { Star as StarFilled, Heart, ExternalLink } from "lucide-react";
 
 export const BookCard = ({ book }) => {
-
   const [liked, setLiked] = useState(false);
 
   return (
     <article className="group flex flex-col space-y-4">
       <div
         title={book.description}
-        className="relative overflow-hidden w-full max-w-70 h-65"
+        className="bookShelf relative overflow-hidden w-full max-w-70 h-65"
       >
         <img
           src={book.image}
           alt={book.title}
           className="h-65 w-full object-contain"
         />
+        <div className="hoverBtn">
+          <a href="#" > quick view <ExternalLink className="size-4" /></a>
+        </div>
 
         {book.discount && (
           <span className="absolute left-3 top-3 bg-brand bg-red-600 px-2 py-1 text-[12px] font-bold text-white">
