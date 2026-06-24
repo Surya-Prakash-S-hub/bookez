@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 
 app.get('/allgenre/books', async(req, res) => {
   try{
-    const database = await pool.query(" SELECT * FROM books ORDER BY RANDOM() LIMIT 15")
+    const database = await pool.query(" SELECT * FROM books ORDER BY RANDOM() LIMIT 8")
     const data = database.rows;
 
     res.status(200).json({
