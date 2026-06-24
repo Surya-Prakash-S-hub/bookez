@@ -8,6 +8,8 @@ import { SelfHelp } from "./SelfHelp/SelfResult"
 import { Fiction } from "./Fiction/Head"
 import { Feedbacks } from "./Accessories/Feedbacks"
 import { Subscribe } from "./Accessories/Subscribe"
+import { Slideslide } from "./Accessories/ShopBook"
+import { Slideslide2 } from "./Accessories/ShopBook2"
 
 export const Stack = () => {
     return(
@@ -20,6 +22,8 @@ export const Stack = () => {
             <History />
             <SelfHelp />
             <Fiction />
+            <Slideslide2 />
+            <Slideslide />
             <Feedbacks />
             <Subscribe />
         </>
