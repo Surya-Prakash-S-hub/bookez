@@ -5,7 +5,7 @@ export const Subscribe = () => {
         <div className="mx-auto max-w-xl space-y-6 px-6 text-center">
           <h2 className="font-serif text-white text-4xl">The Sunday Letter</h2>
           <p className="text-ink/60">
-            Weekly reflections on literature, new arrivals, and the art of
+            Weekly reflections on Fantasy, new arrivals, and the art of
             reading slow.
           </p>
           <form className="flex gap-2">

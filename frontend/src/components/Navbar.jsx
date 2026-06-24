@@ -94,7 +94,7 @@ export const Navbar = () => {
                 href="#bestsellers"
                 className="hover:text-brand transition-colors"
               >
-                Fantacy
+                Fantasy
               </a>
               <a href="#new" className="hover:text-brand transition-colors">
                 History

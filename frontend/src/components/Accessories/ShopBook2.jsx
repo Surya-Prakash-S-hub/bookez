@@ -21,16 +21,16 @@ export const Slideslide2 = () => {
                         </div>
                         <div className="flex flex-col justify-center p-8 md:p-12">
                           <span className="mb-2 text-xs font-semibold uppercase tracking-widest text-amber-300">
-                            Gift Season
+                            Reader Season
                           </span>
             
                           <h2 className="mb-4 font-serif text-3xl md:text-4xl text-gray-200">
-                            The Perfect Gift Bundle
+                            The Best Selling Books of the Month.
                           </h2>
             
                           <p className="mb-8 max-w-md text-gray-400">
-                            Hand-picked trios for the readers in your life. Wrapped,
-                            ribboned, and ready to give.
+                            Hand-picked for the readers in your life. Dive deep into
+                            Adventures.
                           </p>
             
                           <div className="flex gap-4">
@@ -105,7 +105,7 @@ export const Slideslide2 = () => {
                           </div>
             
                           <button className="mt-8 self-start bg-amber-500 px-8 py-3 text-sm font-bold text-white transition-colors hover:bg-amber-300 hover:text-gray-500">
-                            Build a Bundle
+                            Get Books
                           </button>
                         </div>
                       </div>
