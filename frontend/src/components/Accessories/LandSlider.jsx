@@ -1,88 +1,124 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import image1 from "../../assets/heroImg/slide-1.jpg";
-import image2 from "../../assets/heroImg/slide-2.jpg";
-import image3 from "../../assets/heroImg/slide-3.jpg";
-import image4 from "../../assets/heroImg/slide-4.jpg";
-import image5 from "../../assets/heroImg/slide-5.jpg";
+
+import image1 from "../../assets/banners/banner1.webp";
+import image2 from "../../assets/banners/banner2.gif";
+import image3 from "../../assets/banners/banner3.webp";
+import image4 from "../../assets/banners/banner4.webp";
+import image5 from "../../assets/banners/banner5.gif";
 
 export const HeroSlider = () => {
+  const slides = [image1, image2, image3, image4, image5];
+  const sliderData = [...slides, slides[0]];
+
   const [index, setIndex] = useState(0);
+  const [transition, setTransition] = useState(true);
 
-  const slides = [
-    { title: "Where Stories Find a Home", img: image1, tag: "Bookshop" },
-    { title: "Fresh Off the Press", img: image2, tag: "New" },
-    { title: "Stories with a Past", img: image3, tag: "Vintage" },
-    { title: "Slow Sundays", img: image4, tag: "Reading" },
-    { title: "Floor-to-Ceiling Worlds", img: image5, tag: "Library" },
-  ];
-
-  // 🔥 AUTO SLIDE
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 3000); // change every 3 sec
+      setIndex((prev) => prev + 1);
+    }, 3000);
 
-    return () => clearInterval(timer); // cleanup
-  }, [slides.length]);
-
-  const prevSlide = () => {
-    setIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
+    return () => clearInterval(timer);
+  }, []);
 
   const nextSlide = () => {
-    setIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    if (index < slides.length) {
+      setIndex((prev) => prev + 1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (index === 0) {
+      setTransition(false);
+      setIndex(slides.length - 1);
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTransition(true);
+        });
+      });
+    } else {
+      setIndex((prev) => prev - 1);
+    }
+  };
+
+  const handleTransitionEnd = () => {
+    if (index === slides.length) {
+      setTransition(false);
+      setIndex(0);
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTransition(true);
+        });
+      });
+    }
   };
 
   return (
-    <section className="relative w-full h-100 overflow-hidden">
-      <div
-        className="flex transition-transform duration-700 h-full"
-        style={{ transform: `translateX(-${index * 100}%)` }}
-      >
-        {slides.map((s, i) => (
-          <div key={i} className="min-w-full h-full relative">
-
-            <img
-              src={s.img}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-
-            <div className="absolute inset-0 bg-black/50" />
-
-            <div className="relative z-10 flex items-center h-full px-50 text-white">
-              <div>
-                <span className="text-xs border-white border-l-2 border-r-2 bg-white/10 px-3 py-1 rounded-full">
-                  {s.tag}
-                </span>
-
-                <h2 className="text-4xl font-serif mt-4">
-                  {s.title}
-                </h2>
-              </div>
+    <>
+      <section className="group relative mx-auto h-109 max-w-[1800px] overflow-hidden">
+        <div
+          onTransitionEnd={handleTransitionEnd}
+          className={`flex h-full ${
+            transition ? "transition-transform duration-700 ease-in-out" : ""
+          }`}
+          style={{
+            transform: `translate3d(-${index * 100}%, 0, 0)`,
+          }}
+        >
+          {sliderData.map((img, i) => (
+            <div key={i} className="h-full min-w-full shrink-0">
+              <img
+                src={img}
+                alt={`slide-${i}`}
+                className="block h-full w-full object-cover"
+                draggable={false}
+              />
             </div>
-          </div>
-        ))}
-      </div>
-      <button onClick={prevSlide} className="absolute cursor-pointer text-white bg-neutral-500 left-4 top-1/2 p-2 rounded-3xl -translate-y-1/2">
-        <ChevronLeft />
-      </button>
+          ))}
+        </div>
 
-      <button onClick={nextSlide} className="absolute cursor-pointer bg-gray-500 text-white right-4 top-1/2 p-2 rounded-3xl -translate-y-1/2">
-        <ChevronRight />
-      </button>
+        {/* Previous */}
+        <button
+          onClick={prevSlide}
+          className="
+        absolute left-4 top-1/2 z-20
+        -translate-y-1/2
+        rounded-full bg-black/50 p-3 text-white
+        opacity-0 transition-all duration-300
+        group-hover:opacity-100
+      "
+        >
+          <ChevronLeft size={22} />
+        </button>
 
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+        {/* Next */}
+        <button
+          onClick={nextSlide}
+          className="
+        absolute right-4 top-1/2 z-20
+        -translate-y-1/2
+        rounded-full bg-black/50 p-3 text-white
+        opacity-0 transition-all duration-300
+        group-hover:opacity-100
+      "
+        >
+          <ChevronRight size={22} />
+        </button>
+      </section>
+      <div className="mt-4 flex justify-center gap-2">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setIndex(i)}
-            className={`h-2 rounded-full transition-all ${
-              index === i ? "w-8 bg-white" : "w-2 bg-white/50"
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              index % slides.length === i ? "w-8 bg-red-500" : "w-2 bg-gray-300"
             }`}
           />
         ))}
       </div>
-    </section>
+    </>
   );
 };

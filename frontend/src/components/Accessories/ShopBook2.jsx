@@ -35,71 +35,71 @@ export const Slideslide2 = () => {
             
                           <div className="flex gap-4">
                             <button
-                              class="group relative w-20 shrink-0 md:w-24"
+                              className="group relative w-20 shrink-0 md:w-24"
                               title="Add fantasy Forms to cart"
                             >
-                              <div class="aspect-2/3 overflow-hidden rounded-sm shadow-lg">
+                              <div className="aspect-2/3 overflow-hidden rounded-sm shadow-lg">
                                 <img
                                   src={book1}
                                   alt="Modernist Forms"
                                   width="192"
                                   height="288"
-                                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                                 />
                               </div>
-                              <span class="mt-2 block text-center text-gray-300 text-[10px] font-medium">
+                              <span className="mt-2 block text-center text-gray-300 text-[10px] font-medium">
                                 $32.00
                               </span>
                             </button>
                             <button
-                              class="group relative w-20 shrink-0 md:w-24"
+                              className="group relative w-20 shrink-0 md:w-24"
                               title="Add loreum book to the cart"
                             >
-                              <div class="aspect-2/3 overflow-hidden rounded-sm shadow-lg">
+                              <div className="aspect-2/3 overflow-hidden rounded-sm shadow-lg">
                                 <img
                                   src={book2}
                                   alt="Modernist Forms"
                                   width="192"
                                   height="288"
-                                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                                 />
                               </div>
-                              <span class="mt-2 block text-center text-[10px] text-gray-300 font-medium">
+                              <span className="mt-2 block text-center text-[10px] text-gray-300 font-medium">
                                 $32.00
                               </span>
                             </button>
                             <button
-                              class="group relative w-20 shrink-0 md:w-24"
+                              className="group relative w-20 shrink-0 md:w-24"
                               title="Add Modernist Forms to cart"
                             >
-                              <div class="aspect-2/3 overflow-hidden rounded-sm shadow-lg">
+                              <div className="aspect-2/3 overflow-hidden rounded-sm shadow-lg">
                                 <img
                                   src={book3}
                                   alt="Modernist Forms"
                                   width="192"
                                   height="288"
-                                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                                 />
                               </div>
-                              <span class="mt-2 block text-center text-gray-300 text-[10px] font-medium">
+                              <span className="mt-2 block text-center text-gray-300 text-[10px] font-medium">
                                 $32.00
                               </span>
                             </button>
                             <button
-                              class="group relative w-20 shrink-0 md:w-24"
+                              className="group relative w-20 shrink-0 md:w-24"
                               title="Add Modernist Forms to cart"
                             >
-                              <div class="aspect-2/3 overflow-hidden rounded-sm shadow-lg">
+                              <div className="aspect-2/3 overflow-hidden rounded-sm shadow-lg">
                                 <img
                                   src={book4}
                                   alt="Modernist Forms"
                                   width="192"
                                   height="288"
-                                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                                 />
                               </div>
-                              <span class="mt-2 block text-center text-gray-300 text-[10px] font-medium">
-                                $32.00
+                              <span className="mt-2 block text-center text-gray-300 text-[10px] font-medium">
+                                $32.00  
                               </span>
                             </button>
                           </div>

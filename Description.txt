@@ -1,0 +1,64 @@
+***Bookez - Modern Online Book Landing Page***
+
+"Bookez" is a web application inspired by modern online bookstores. 
+The project was developed using a full-stack JavaScript architecture with React and Vite for the frontend, Node.js and Express.js for the backend, and Neon PostgreSQL as the cloud database solution.
+
+The application showcases books across multiple categories, including Fiction, Fantasy, Programming, Self Help, Biography, Science, and Business. 
+Book information is dynamically fetched from the BACKEND API, which retrieves data from the PostgreSQL database hosted on Neon.
+
+To provide a better user experience, the application implements "Skeleton Loading", displaying placeholder book cards while data is being fetched from the server. This creates a smooth and responsive feel and prevents empty screens during loading.
+
+Key Features
+1. Modern bookstore landing page UI.
+2. Dynamic book data fetching using REST APIs.
+3. Skeleton loading for a smoother user experience.
+4. Cloud-hosted PostgreSQL database with Neon.
+5. Optimized image loading for banners and book covers.
+6. Categorized book collections with randomly displayed books.
+7. Clean and scalable full-stack architecture.
+8. Fast page rendering and lightweight user experience.
+
+Technologies Used
+=> Frontend: React.js, Vite, Tailwind CSS
+=> Backend: Node.js, Express.js
+=> Database: Neon PostgreSQL
+
+Deployment:
+=> Frontend: Vercel
+=> Backend API: Render
+=> Database: Neon
+=> Source Code: GitHub
+
+The application is fully deployed and production-ready. When users access the website through Vercel, the frontend communicates with the backend hosted on Render, which securely fetches data from the Neon PostgreSQL database, providing a stable and reliable user experience.
+
+Due to the limited availability of suitable assets, several banner designs and book illustrations were created using AI-powered image generation tools while maintaining a consistent and elegant visual style throughout the application.
+
+This project demonstrates practical experience in full-stack web development, REST API integration, cloud databases, deployment workflows, performance optimization, and building user-friendly interfaces using modern web technologies.
+
+Environmental Variables: (recommended = use this variables inside .env file)
+VITE_API_URL='use-your-backend-url' or 'provide-localhost'
+DATABASE_URL ='neon-db-url' or 'create-local-db-then-use-them'
+PORT='user-preferred-port' (check if the port is not using in you local desk. only when your working locally'
+
+*For Icons = 'Lucide-React' (it's provide various types of icons)
+
+Before Run: (Install dependencies )
+Run = npm install (to install dependencies) in both frontend and backend folders
+
+**For frontend:
+>> cd frontend
+>> (In terminal) = run npm dev
+
+**In Backend
+>> cd backend
+>> (In terminal) = You can use both (node or nodemon) for continuously run use nodemon. I used nodemon
+>> After installed nodemon > In terminal(run) > nodemon server.js
+>> Open your local browser and enter the localhost with assigned port to view the web app.
+
+
+
+**Website = https://bookez-zeta.vercel.app/
+**Github = https://github.com/Surya-Prakash-S-hub/bookez.git
+
+        ***Enjoy the modern web application***
+                            **THANK YOU**

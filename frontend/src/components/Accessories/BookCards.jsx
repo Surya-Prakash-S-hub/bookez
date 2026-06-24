@@ -5,7 +5,7 @@ export const BookCard = ({ book }) => {
   const [liked, setLiked] = useState(false);
 
   return (
-    <article className="group flex flex-col space-y-4">
+    <article className="group outerLayer flex flex-col space-y-4">
       <div
         title={book.description}
         className="bookShelf relative overflow-hidden w-full max-w-70 h-65"
@@ -15,8 +15,8 @@ export const BookCard = ({ book }) => {
           alt={book.title}
           className="h-65 w-full object-contain"
         />
-        <div className="hoverBtn">
-          <a href="#" > quick view <ExternalLink className="size-4" /></a>
+        <div className="finder w-full bg-gray-300 h-15 absolute top-10/12">
+          <a href="#" className="flex w-full text-[18px] h-full align-top justify-center pt-2 gap-2 capitalize text-red-500 font-medium" > quick view <ExternalLink className="size-4 mt-1.5" /></a>
         </div>
 
         {book.discount && (
@@ -53,6 +53,11 @@ export const BookCard = ({ book }) => {
               ₹{book.price}
             </span>
           ) : null}
+          {book.discount ? (
+            <div className="text-green-600 text-sm font-bold" >
+              ({book.discount}%)
+            </div>
+          ) : null}
         </div>
 
         <div className="flex gap-2">
@@ -65,7 +70,7 @@ export const BookCard = ({ book }) => {
               fill={liked ? "currentColor" : "none"}
             />
           </div>
-          <button className="mt-2 w-full border py-2 text-xs uppercase hover:bg-black hover:text-white">
+          <button className="mt-2 w-full bg-red-500 py-2 text-xs text-white font-bold rounded-sm uppercase hover:bg-black hover:text-white">
             Add to Cart
           </button>
         </div>

@@ -71,7 +71,7 @@ export const FinalOut = () => {
 
   return (
     <>
-      <section id="newbooks">
+      <section className="my-4" id="newbooks">
         <BookButton activeGenre={activeGenre} setActiveGenre={setActiveGenre} />
         <Books
           activeGenre={activeGenre}

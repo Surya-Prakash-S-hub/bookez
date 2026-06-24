@@ -1,11 +1,11 @@
-import fantasybanner from "../../assets/banners/fantasy.png";
+import fantasybanner from "../../assets/banners/sports.jpg";
 import { BookLists } from "./FanDetails";
 
 export const Fantasy = () => {
     return(
         <>
-            <section className="mx-auto max-w-7xl px-2 py-12" >
-                <div className="fantasybanner h-50" >
+            <section className="mx-auto max-w-385 px-2 py-6" >
+                <div className="fantasybanner h-70" >
                     <a href="#" className="mx-auto">
                         <img src={fantasybanner} alt="fantasy" className="rounded-lg" />
                     </a>

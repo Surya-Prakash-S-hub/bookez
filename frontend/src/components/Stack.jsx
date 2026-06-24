@@ -1,5 +1,4 @@
 import { HeroSlider } from "./Accessories/LandSlider"
-import { Slider } from "./Accessories/Slider"
 import { FinalOut } from "./Booklists/FinalSec"
 import { Fantasy } from "./Fantasy/FantasyBooks"
 import { ProgramLists } from "./Program/ProFinal"
@@ -15,7 +14,6 @@ export const Stack = () => {
     return(
         <>
             <HeroSlider />
-            <Slider />
             <FinalOut />
             <Fantasy />
             <ProgramLists />
