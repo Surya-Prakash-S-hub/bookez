@@ -46,6 +46,51 @@ nav .menubar button:hover::after
   transition: transform 0.23s linear;
 }
 
+.tag 
+{
+  position: relative;
+}
+.tag::after
+{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: gray;
+  right: -20px;
+  pointer-events: none;
+}
+.tagBtn
+{
+  position: relative;
+}
+.tagBtn::after
+{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 22px;
+  background-color: gray;
+  left: -10px;
+  pointer-events: none;
+}
+.dropBtn
+{
+  position: relative;
+}
+.dropBtn::before
+{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 25px;
+  background-color: gray;
+  right: -65px;
+  pointer-events: none;
+}
+
+/* ---------*/
+
 .saleSheet {
   width: 100%;
   max-width: 100%;

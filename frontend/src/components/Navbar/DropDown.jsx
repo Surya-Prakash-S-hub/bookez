@@ -4,7 +4,7 @@ export const DropDownNav = () => {
       <div className="menubar flex h-full items-center justify-between">
         {/* Bestsellers */}
         <div className="group h-full">
-          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Academics</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800 dropBtn">Academics</button>
 
           <div
             className="
@@ -52,7 +52,7 @@ export const DropDownNav = () => {
 
         {/* New Arrivals */}
         <div className="group h-full">
-          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Fiction</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800 dropBtn">Fiction</button>
 
           <div
             className="
@@ -72,7 +72,7 @@ export const DropDownNav = () => {
 
         {/* Personalisation */}
         <div className="group h-full">
-          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Non Fiction</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800 dropBtn">Non Fiction</button>
 
           <div
             className="
@@ -92,7 +92,7 @@ export const DropDownNav = () => {
 
         {/* New */}
         <div className="group h-full">
-          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Children</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800 dropBtn">Children</button>
 
           <div
             className="
@@ -112,7 +112,7 @@ export const DropDownNav = () => {
 
         {/* Gifting */}
         <div className="group h-full">
-          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Young Adults</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800 dropBtn">Young Adults</button>
 
           <div
             className="
@@ -132,7 +132,7 @@ export const DropDownNav = () => {
 
         {/* Top Publishers */}
         <div className="group h-full">
-          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Comics & Graphic Novels</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800 dropBtn">Comics & Graphic Novels</button>
 
           <div
             className="
@@ -152,7 +152,7 @@ export const DropDownNav = () => {
 
         {/* Get App */}
         <div className="group h-full">
-          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Languages</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800 dropBtn">Languages</button>
 
           <div
             className="
