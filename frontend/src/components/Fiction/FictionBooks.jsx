@@ -1,65 +1,67 @@
-import { useEffect, useState } from "react";
-import { BookCard } from "../Accessories/BookCards";
-import { API_BASE_URL } from "../../config/api";
-import { getBookImage } from "../../utils/bookImages";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
-export const FictionLists = () => {
-  const [bookDetails, setBookDetails] = useState([]);
-  const [loading, setLoading] = useState(true);
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
 
-  useEffect(() => {
-    const fetchData = async () => {
-      fetch(`${API_BASE_URL}/books/fiction`)
-        .then((response) => {
-          if (!response.ok) {
-            console.log("error occured");
-          }
-          return response.json();
-        })
-        .then((data) => {
-           const mapWithImages = (arr = []) =>
-            arr.map((book) => ({
-              ...book,
-              image: getBookImage(book.id),
-            }));
-          setBookDetails(mapWithImages(data.output));
-          setLoading(false);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
+import "./style.css";
 
-    fetchData();
-  }, []);
-  if (loading) {
-    return (
-      <div className="w-250 mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {Array(8)
-            .fill(0)
-            .map((_, i) => (
-              <div key={i} className="animate-pulse">
-                {/* image placeholder */}
-                <div className="h-40 bg-gray-300 rounded"></div>
+// import required modules
+import { Navigation } from "swiper/modules";
 
-                {/* title placeholder */}
-                <div className="h-3 bg-gray-300 mt-2 w-3/4 rounded"></div>
+import bookshop1 from "../../assets/DesignText/shop1.webp"
+import bookshop2 from "../../assets/DesignText/shop2.webp"
+import bookshop3 from "../../assets/DesignText/shop3.webp"
+import bookshop4 from "../../assets/DesignText/shop4.webp"
+import bookshop5 from "../../assets/DesignText/shop5.webp"  
+import bookshop6 from "../../assets/DesignText/shop6.webp"
+import bookshop7 from "../../assets/DesignText/shop7.webp"
+import bookshop8 from "../../assets/DesignText/shop8.webp"
+import bookshop9 from "../../assets/DesignText/shop9.webp"
 
-                {/* author placeholder */}
-                <div className="h-3 bg-gray-300 mt-2 w-1/2 rounded"></div>
-              </div>
-            ))}
-        </div>
-      </div>
-    );
-  }
+export const MiniSlider = () => {
   return (
     <>
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {bookDetails?.map((book) => (
-          <BookCard key={book.id} book={book} />
-        ))}
+      <div className="h-45">
+        <div className="font-baskerville text-2xl text-neutral-800 mt-7" >
+          Shop By Publishers
+        </div>
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+          <SwiperSlide className="mainswiper">
+            <a href="#" style={{padding:'15px'}}>
+              <img src={bookshop1} alt="shoplist" />
+            </a>
+            <a href="#">
+              <img src={bookshop2} alt="shoplist" />
+            </a>
+            <a href="#">
+              <img src={bookshop3} alt="shoplist" />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide className="mainswiper">
+            <a href="#">
+              <img src={bookshop4} alt="shoplist" />
+            </a>
+            <a href="#">
+              <img src={bookshop5} alt="shoplist" />
+            </a>
+            <a href="#">
+              <img src={bookshop6} alt="shoplist" />
+            </a>
+          </SwiperSlide>
+          <SwiperSlide className="mainswiper">
+            <a href="#">
+              <img src={bookshop7} alt="shoplist" />
+            </a>
+            <a href="#">
+              <img src={bookshop8} alt="shoplist" />
+            </a>
+            <a href="#">
+              <img src={bookshop9} alt="shoplist" />
+            </a>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </>
   );

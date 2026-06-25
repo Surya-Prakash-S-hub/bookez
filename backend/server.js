@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 
 app.get('/allgenre/books', async(req, res) => {
   try{
-    const database = await pool.query(" SELECT * FROM books ORDER BY RANDOM() LIMIT 8")
+    const database = await pool.query(" SELECT * FROM books ORDER BY RANDOM() LIMIT 16")
     const data = database.rows;
 
     res.status(200).json({
@@ -50,9 +50,9 @@ app.get("/specific/books", async (req, res) => {
 
 app.get('/books/fantasy', async(req, res) => {
   try {
-    const database = await pool.query('SELECT books.* FROM books JOIN categories ON books.category_id = categories.id WHERE categories.id = 2 LIMIT 8');
+    const database = await pool.query('SELECT books.* FROM books JOIN categories ON books.category_id = categories.id WHERE categories.id = 2 LIMIT 6');
 
-    const data = database.rows;
+    const data = database.rows.slice(0, 6);
 
     res.status(200).json({success:true,output:data});
   } catch (err) {
@@ -76,7 +76,7 @@ app.get('/books/history', async(req, res) => {
   try {
     const database = await pool.query('SELECT books.* FROM books JOIN categories ON books.category_id = categories.id WHERE categories.id = 4 LIMIT 8');
 
-    const data = database.rows;
+    const data = database.rows.slice(0,6);
 
     res.status(200).json({success:true,output:data});
   } catch (err) {
@@ -86,7 +86,7 @@ app.get('/books/history', async(req, res) => {
 })
 app.get('/books/selfhelp', async(req, res) => {
   try {
-    const database = await pool.query('SELECT books.* FROM books JOIN categories ON books.category_id = categories.id WHERE categories.id = 8 LIMIT 4');
+    const database = await pool.query('SELECT books.* FROM books JOIN categories ON books.category_id = categories.id WHERE categories.id = 8 LIMIT 6');
 
     const data = database.rows;
 

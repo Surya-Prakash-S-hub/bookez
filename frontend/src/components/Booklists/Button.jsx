@@ -13,8 +13,8 @@ export const BookButton = ({ activeGenre, setActiveGenre }) => {
           <div className="flex align-middle justify-between py-5" >
             <div className="font-medium useFontHere text-neutral-800 text-2xl" >New Release</div>
             <div>
-              <a href="#" className="links text-[16px] uppercase flex text-red-500" >view all
-                <ChevronRight className="font-medium" />
+              <a href="#" className="morelinks text-[16px] uppercase flex text-red-500" >view all
+                <ChevronRight className="font-medium rightarrow" />
               </a>
             </div>
           </div>

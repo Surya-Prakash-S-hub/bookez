@@ -5,10 +5,7 @@ import { ProgramLists } from "./Program/ProFinal"
 import { History } from "./History/HisResult"
 import { SelfHelp } from "./SelfHelp/SelfResult"
 import { Fiction } from "./Fiction/Head"
-import { Feedbacks } from "./Accessories/Feedbacks"
-import { Subscribe } from "./Accessories/Subscribe"
-import { Slideslide } from "./Accessories/ShopBook"
-import { Slideslide2 } from "./Accessories/ShopBook2"
+import { BookTrailerSlider } from "./Accessories/LongSlider"
 
 export const Stack = () => {
     return(
@@ -20,10 +17,7 @@ export const Stack = () => {
             <History />
             <SelfHelp />
             <Fiction />
-            <Slideslide2 />
-            <Slideslide />
-            <Feedbacks />
-            <Subscribe />
+            <BookTrailerSlider />
         </>
     )
 }

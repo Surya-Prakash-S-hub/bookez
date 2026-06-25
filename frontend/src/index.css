@@ -1,8 +1,49 @@
 @import "tailwindcss";
 
+/* font families */
+
+.font-script {
+  font-family: "Rouge Script", cursive;
+}
+
+.font-tangerine {
+  font-family: "Tangerine", cursive;
+}
+
+.font-manrope {
+  font-family: "Manrope", sans-serif;
+}
+
+.font-baskerville {
+  font-family: "Libre Baskerville", serif;
+}
+
+/* nav style */
 nav
 {
   font-family: "Manrope", sans-serif;
+}
+nav .menubar button
+{
+  position: relative;
+}
+nav .menubar button::after
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: orangered;
+  border-radius: 50px;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+nav .menubar button:hover::after
+{
+  transform: scaleX(1);
+  transition: transform 0.23s linear;
 }
 
 .saleSheet {
@@ -11,6 +52,36 @@ nav
   height: 40px;
   background-color: #232423;
   background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+}
+.morelinks
+{
+  position: relative;
+}
+.morelinks::after
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.32s ease;
+}
+.morelinks .rightarrow
+{
+  transition: all 0.12s linear;
+}
+.morelinks:hover .rightarrow
+{
+  translate: 12px;
+}
+.morelinks:hover::after
+{
+  transform: scaleX(1);
+  transform-origin: left;
 }
 .useFontHere
 {
@@ -191,3 +262,74 @@ nav
         translate: -100%;
       }
     }
+/* footer style goes here */
+footer
+{
+  width: 100%;
+  background-color: rgb(48, 51, 63);
+}
+footer .topfooter
+{
+  display: flex;
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 10px;
+}
+footer .mainfooter
+{
+  padding:30px 0;
+}
+footer .topfooter .endlinks{
+  padding: 10px;
+}
+footer .topfooter .endlinks div
+{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer .topfooter .endlinks h1
+{
+  font-size: large;
+  font-family: "Libre Baskerville", serif;
+  color: rgb(235, 235, 235);
+  margin-bottom: 15px;
+}
+footer .topfooter .endlinks div a
+{
+  max-width: 180px;
+  color: rgb(177, 177, 177);
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+}
+footer .secondary
+{
+  border-top: 1px solid rgba(255, 255, 255, 0.192);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.192);
+}
+footer .logoStyle
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+footer .logoStyle p
+{
+  color: white;
+}
+footer .popularlinks
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+footer .popularlinks .externallink
+{
+  display: flex;
+  gap: 15px;
+}

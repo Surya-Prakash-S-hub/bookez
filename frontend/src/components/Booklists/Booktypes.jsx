@@ -24,7 +24,7 @@ export const Books = ({
   const booksToShow = getBooks();
 
   return (
-    <section className="mx-auto max-w-360 px-6 py-1 space-y-20">
+    <section className="mx-auto max-w-345 px-6 py-1 space-y-20">
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-6">
         {booksToShow?.map((book) => (
           <BookCard key={book.id} book={book} />

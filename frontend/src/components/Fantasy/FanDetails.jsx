@@ -56,7 +56,7 @@ export const BookLists = () => {
   }
   return (
     <>
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-6">
         {bookDetails?.map((book) => (
           <BookCard key={book.id} book={book} />
         ))}

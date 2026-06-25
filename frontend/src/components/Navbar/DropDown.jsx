@@ -1,22 +1,22 @@
 export const DropDownNav = () => {
   return (
     <div className="relative mx-auto px-7 h-14 max-w-[1800px]">
-      <div className="flex h-full items-center justify-between">
+      <div className="menubar flex h-full items-center justify-between">
         {/* Bestsellers */}
         <div className="group h-full">
-          <button className="h-full font-bold">Academics</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Academics</button>
 
           <div
             className="
-          invisible absolute left-0 top-full w-full
-          opacity-0 translate-y-4
+          invisible absolute left-0 top-13 w-full
+          opacity-0 scale-0
           transition-all duration-300
           group-hover:visible
-          group-hover:translate-y-0
+          group-hover:scale-100
           group-hover:opacity-100
         "
           >
-            <div className="rounded-xl bg-white p-10 shadow-2xl">
+            <div className=" bg-white p-10 shadow-2xl">
               <div className="grid grid-cols-4 gap-10">
                 <div>
                   <h3 className="mb-4 font-semibold">Fiction</h3>
@@ -52,19 +52,19 @@ export const DropDownNav = () => {
 
         {/* New Arrivals */}
         <div className="group h-full">
-          <button className="h-full font-bold">Fiction</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Fiction</button>
 
           <div
             className="
-          invisible absolute left-0 top-full w-full
-          opacity-0 translate-y-4
+          invisible absolute left-0 top-13 w-full
+          opacity-0 scale-0
           transition-all duration-300
           group-hover:visible
-          group-hover:translate-y-0
+          group-hover:scale-100
           group-hover:opacity-100
         "
           >
-            <div className="rounded-xl bg-white p-10 shadow-2xl">
+            <div className=" bg-white p-10 shadow-2xl">
               New Arrivals Content
             </div>
           </div>
@@ -72,19 +72,19 @@ export const DropDownNav = () => {
 
         {/* Personalisation */}
         <div className="group h-full">
-          <button className="h-full font-bold">Non Fiction</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Non Fiction</button>
 
           <div
             className="
-          invisible absolute left-0 top-full w-full
-          opacity-0 translate-y-4
+          invisible absolute left-0 top-13 w-full
+          opacity-0 scale-0
           transition-all duration-300
           group-hover:visible
-          group-hover:translate-y-0
+          group-hover:scale-100
           group-hover:opacity-100
         "
           >
-            <div className="rounded-xl bg-white p-10 shadow-2xl">
+            <div className=" bg-white p-10 shadow-2xl">
               Personalisation Content
             </div>
           </div>
@@ -92,19 +92,19 @@ export const DropDownNav = () => {
 
         {/* New */}
         <div className="group h-full">
-          <button className="h-full font-bold">Children</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Children</button>
 
           <div
             className="
-          invisible absolute left-0 top-full w-full
-          opacity-0 translate-y-4
+          invisible absolute left-0 top-13 w-full
+          opacity-0 scale-0
           transition-all duration-300
           group-hover:visible
-          group-hover:translate-y-0
+          group-hover:scale-100
           group-hover:opacity-100
         "
           >
-            <div className="rounded-xl bg-white p-10 shadow-2xl">
+            <div className=" bg-white p-10 shadow-2xl">
               New Content
             </div>
           </div>
@@ -112,19 +112,19 @@ export const DropDownNav = () => {
 
         {/* Gifting */}
         <div className="group h-full">
-          <button className="h-full font-bold">Young Adults</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Young Adults</button>
 
           <div
             className="
-          invisible absolute left-0 top-full w-full
-          opacity-0 translate-y-4
+          invisible absolute left-0 top-13 w-full
+          opacity-0 scale-0
           transition-all duration-300
           group-hover:visible
-          group-hover:translate-y-0
+          group-hover:scale-100
           group-hover:opacity-100
         "
           >
-            <div className="rounded-xl bg-white p-10 shadow-2xl">
+            <div className=" bg-white p-10 shadow-2xl">
               Gifting Content
             </div>
           </div>
@@ -132,19 +132,19 @@ export const DropDownNav = () => {
 
         {/* Top Publishers */}
         <div className="group h-full">
-          <button className="h-full font-bold">Comics & Graphic Novels</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Comics & Graphic Novels</button>
 
           <div
             className="
-          invisible absolute left-0 top-full w-full
-          opacity-0 translate-y-4
+          invisible absolute left-0 top-13 w-full
+          opacity-0 scale-0
           transition-all duration-300
           group-hover:visible
-          group-hover:translate-y-0
+          group-hover:scale-100
           group-hover:opacity-100
         "
           >
-            <div className="rounded-xl bg-white p-10 shadow-2xl">
+            <div className=" bg-white p-10 shadow-2xl">
               Top Publishers Content
             </div>
           </div>
@@ -152,19 +152,19 @@ export const DropDownNav = () => {
 
         {/* Get App */}
         <div className="group h-full">
-          <button className="h-full font-bold">Languages</button>
+          <button className="h-full font-bold text-neutral-500 group-hover:text-neutral-800">Languages</button>
 
           <div
             className="
-          invisible absolute left-0 top-full w-full
-          opacity-0 translate-y-4
+          invisible absolute left-0 top-13 w-full
+          opacity-0 scale-0
           transition-all duration-300
           group-hover:visible
-          group-hover:translate-y-0
+          group-hover:scale-100
           group-hover:opacity-100
         "
           >
-            <div className="rounded-xl bg-white p-10 shadow-2xl">
+            <div className=" bg-white p-10 shadow-2xl">
               Get App Content
             </div>
           </div>

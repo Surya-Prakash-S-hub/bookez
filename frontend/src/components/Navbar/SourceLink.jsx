@@ -1,4 +1,5 @@
 import { ChevronDown, Smartphone, Zap } from "lucide-react";
+import rapido from "../../assets/DesignText/rapidicon.svg";
 
 export const SecondaryNav = () => {
   return (
@@ -37,8 +38,11 @@ export const SecondaryNav = () => {
             </div>
         </div>
         <div className="flex items-center gap-5">
-          <button className="flex items-center gap-2 text-sm font-medium text-gray-700 transition-colors hover:text-black">
-            <Smartphone size={16} />
+          <button className="cursor-pointer">
+            <img src={rapido} className="size-12" alt="rapidicon" />
+          </button>
+          <button className="cursor-pointer uppercase flex items-center gap-2 text-sm font-medium text-gray-700 transition-colors hover:text-black">
+            <Smartphone size={25} className="text-orange-700" />
             Get App
           </button>
 

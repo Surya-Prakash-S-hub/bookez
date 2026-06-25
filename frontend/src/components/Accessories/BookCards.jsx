@@ -5,7 +5,7 @@ export const BookCard = ({ book }) => {
   const [liked, setLiked] = useState(false);
 
   return (
-    <article className="group outerLayer flex flex-col space-y-4">
+    <article className="group outerLayer flex flex-col">
       <div
         title={book.description}
         className="bookShelf relative overflow-hidden w-full max-w-70 h-65"
@@ -26,7 +26,7 @@ export const BookCard = ({ book }) => {
         )}
       </div>
 
-      <div className="text-center">
+      <div className="text-center font-manrope">
         {book.rating ? (
           <span className="flex gap-2 justify-center ">
             <StarFilled size={16} fill="gold" className="text-yellow-400 " />
@@ -70,7 +70,7 @@ export const BookCard = ({ book }) => {
               fill={liked ? "currentColor" : "none"}
             />
           </div>
-          <button className="mt-2 w-full bg-red-500 py-2 text-xs text-white font-bold rounded-sm uppercase hover:bg-black hover:text-white">
+          <button className="mt-2 w-full bg-red-500 py-2 text-xs text-white font-bold rounded-sm uppercase hover:bg-red-600 hover:text-white">
             Add to Cart
           </button>
         </div>
